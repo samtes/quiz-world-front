@@ -34,16 +34,16 @@ a {
   margin-top: 38px;
 }
 
-.menu-link {
-  color: white;
-}
-
 .menu-link:hover {
   color: #F0ECEC;
 }
 
-.menu-link:active {
+.active {
   color: white;
+}
+
+.inactive {
+  color: #C1BDBD;
 }
 
 .menu li {
@@ -83,7 +83,7 @@ a {
 
 .admin {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 60px;
 }
 
 .admin div {

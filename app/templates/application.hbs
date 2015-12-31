@@ -1,1 +1,13 @@
+<div class="page-title">
+  <div class="nav-bar">
+    <h1 class="title">{{title}}</h1>
+    <div>
+      <ul class="menu">
+        {{#each sub in subTitles}}
+          <li>{{#link-to sub.page class=sub.class}} {{sub.title}} {{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
 {{outlet}}

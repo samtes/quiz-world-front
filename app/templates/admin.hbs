@@ -1,25 +1,10 @@
 {{outlet}}
-<div class="page-title">
-  <div class="nav-bar">
-    <h1 class="title">Admin Panal</h1>
-  </div>
-</div>
 <div class="container">
   <div class="admin">
-    <a href="/admin">
-      <div class="long-button">
-        ADD OR UPDATE QUESTIONS
-      </div>
-    </a>
-    <a href="/admin">
-      <div class="long-button">
-        VIEW RESULTS
-      </div>
-    </a>
-    <a href="/admin">
-      <div class="long-button">
-        GENERATE URL
-      </div>
-    </a>
+    {{#each button in buttons}}
+      {{#link-to button.page}}
+        <div class="long-button"> {{button.button}} </div>
+      {{/link-to}}
+    {{/each}}
   </div>
 </div>
