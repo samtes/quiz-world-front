@@ -7,6 +7,10 @@ html, body {
   transition: opacity 0.2s ease, padding 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
 .notice {
   padding-top: 20px;
   color: #FF5E00;
@@ -31,9 +35,31 @@ html, body {
   display: flex;
 }
 
+.container {
+  margin: 200px auto 0;
+
+}
+
+.admin {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.admin div {
+  width: 800px;
+  height: 40px;
+  margin: 0 auto 20px;
+  border: 1px solid #949494;
+  border-radius: 9px;
+  padding-top: 20px;
+}
+.admin div:hover {
+  background-color: #007BFF;
+  color: white;
+}
 .instructions {
   width: 80%;
-  margin: 180px auto 0;
+  margin: 0 auto;
   color: #949494;
 }
 
@@ -56,7 +82,6 @@ html, body {
 }
 .register {
   margin: auto;
-  margin-top: 200px;
 }
 .normal {
   display: block;
