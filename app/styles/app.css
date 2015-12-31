@@ -7,13 +7,6 @@ html, body {
   transition: opacity 0.2s ease, padding 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.container {
-  width: 100%;
-  margin-top: 100px;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
 .notice {
   padding-top: 20px;
   color: #FF5E00;
@@ -38,6 +31,29 @@ html, body {
   display: flex;
 }
 
+.instructions {
+  width: 80%;
+  margin: 180px auto 0;
+  color: #949494;
+}
+
+.instructions li {
+  line-height: 25px;
+  font-size: 16px;
+}
+.checkbox {
+  list-style-type: none;
+  color: black;
+}
+
+.checkbox label {
+  font-size: 14px;
+}
+
+.center {
+  width: 100%;
+  margin: 40px auto;
+}
 .register {
   margin: auto;
   margin-top: 200px;
