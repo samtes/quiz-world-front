@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 
     controller.set("buttons", [
       { button: "ADD OR UPDATE QUESTIONS", page: "adder" },
-      { button: "VIEW RESULTS", page: "generator" },
+      { button: "VIEW RESULTS", page: "results" },
       { button: "GENERATE URL", page: "generator" }
     ]);
   }

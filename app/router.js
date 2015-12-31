@@ -19,6 +19,9 @@ Router.map(function() {
     this.route('find');
     this.route('add');
   });
+  this.route('results', function() {
+    this.route('result');
+  });
 });
 
 export default Router;
