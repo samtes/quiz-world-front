@@ -68,6 +68,19 @@ a {
   margin: 200px auto 0;
 }
 
+.generated-url {
+  border: 1px solid #949494;
+  color: #949494;
+  border-radius: 9px;
+  font-size: 15px;
+  font-style: oblique;
+  padding: 5px 10px;
+  height: 20px;
+  width: 650px;
+  text-align: center;
+  margin: 20px auto;
+}
+
 .admin {
   text-align: center;
   padding-top: 200px;
