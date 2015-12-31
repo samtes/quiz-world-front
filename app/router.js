@@ -14,6 +14,11 @@ Router.map(function() {
     this.route('custom');
     this.route('random');
   });
+  this.route('adder', function() {
+    this.route('upload');
+    this.route('find');
+    this.route('add');
+  });
 });
 
 export default Router;
