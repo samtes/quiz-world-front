@@ -116,6 +116,14 @@ a {
   border-radius: 9px;
 }
 
+.search {
+  margin: 10px auto;
+  padding: 20px 30px 0;
+  width: 60%;
+  min-height: 40px;
+  border-radius: 9px;
+}
+
 .question-id {
   color: #949494;
   font-weight: bold;
