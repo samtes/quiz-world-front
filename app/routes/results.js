@@ -4,7 +4,10 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this.controllerFor("application").setProperties({
       title: "Quiz results",
-      subTitles: []
+      subTitles: [
+        { title:"RESULTS", class: "active", page: "results" },
+        { title:"ADMIN", class: "inactive", page: "admin" }
+      ]
     });
   }
 });

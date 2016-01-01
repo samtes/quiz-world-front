@@ -4,7 +4,11 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this.controllerFor("application").setProperties({
       title: "Admin URL generator",
-      subTitles: [{title: "CUSTOM", class: "inactive", page: "generator.custom"}, {title:"RANDOM", class: "active", page: "generator.random"}],
+      subTitles: [
+        { title: "CUSTOM", class: "inactive", page: "generator.custom" },
+        { title:"RANDOM", class: "active", page: "generator.random" },
+        { title:"ADMIN", class: "inactive", page: "admin" }
+      ],
     });
   }
 });

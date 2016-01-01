@@ -30,6 +30,24 @@ a {
   clear: both;
 }
 
+
+.menu-side {
+  padding-left: 0;
+  margin: 6px 0;
+  list-style-type: none;
+}
+
+.menu-normal {
+  text-align: center;
+  display: inline;
+  padding: 5px;
+}
+
+.side-nav {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}
 .menu {
   margin-top: 38px;
 }
@@ -187,4 +205,8 @@ a {
 
 .button.normal:hover {
   background-color: #419AF9;
+}
+
+.primary-link {
+  color: #007BFF;
 }
