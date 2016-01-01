@@ -30,7 +30,6 @@ a {
   clear: both;
 }
 
-
 .menu-side {
   padding-left: 0;
   margin: 6px 0;
@@ -48,6 +47,7 @@ a {
   top: 100px;
   right: 10px;
 }
+
 .menu {
   margin-top: 38px;
 }
@@ -86,6 +86,10 @@ a {
   margin: 200px auto 0;
 }
 
+.up {
+  margin: 80px auto 0;
+}
+
 .generated-url {
   border: 1px solid #949494;
   color: #949494;
@@ -104,7 +108,37 @@ a {
   padding-top: 60px;
 }
 
-.admin div {
+.question {
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%;
+  min-height: 70px;
+  border-radius: 9px;
+}
+
+.question-id {
+  color: #949494;
+  font-weight: bold;
+  position: relative;
+  bottom: 116px;
+  right: 6px;
+}
+
+.radio {
+  position: relative;
+  bottom: 15px;
+  right: 6px;
+}
+
+.option {
+  padding: 10px;
+  width: 58%;
+  height: 20px;
+  border-radius: 9px;
+  color: #949494;
+}
+
+.admin-button {
   width: 800px;
   height: 40px;
   margin: 0 auto 20px;
@@ -113,15 +147,29 @@ a {
   padding-top: 20px;
 }
 
-.admin div:hover {
+.admin-button:hover {
   background-color: #007BFF;
   color: white;
+}
+
+.selectors {
+  justify-content: center;
+  display: flex;
+  margin: 30px;
+}
+
+.side-by-side {
+  margin: 0 40px;
 }
 
 .center {
   width: 100%;
   text-align: center;
   margin: auto;
+}
+
+textarea {
+   resize: none;
 }
 
 .text-page {
@@ -162,36 +210,46 @@ a {
 }
 
 .normal-mid {
-  display: block;
+  padding-left: 15px;
   border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  color: #949494;
+  color: #707070;
   font-size: 15px;
   text-align: center;
-  font-weight: bold;
   margin: 10px auto 20px;
+}
+
+.side-by-side label {
+  color: #707070;
+}
+.long {
+  width: 190px;
+}
+
+.block {
+  display: block;
 }
 
 .half {
   width: 140px;
 }
+
 .center-div {
-    padding-top: 13px;
-    padding-left: 46px;
-    padding-bottom: 20px;
-    width: 155px;
-    margin: 0 auto;
+  padding-top: 13px;
+  padding-left: 46px;
+  padding-bottom: 20px;
+  width: 155px;
+  margin: 0 auto;
 }
 
 .center-div div {
   padding-bottom: 8px;
 }
+
 .center div {
   text-align: left;
 }
 
-.button.normal {
+.normal {
   width: 300px;
   height: 40px;
   border-radius: 5px;
@@ -199,14 +257,41 @@ a {
   text-align: center;
   font-weight: bold;
   background-color: #007BFF;
+  border: 1px solid #949494;
   margin: 20px auto 10px;
 }
 
-
-.button.normal:hover {
-  background-color: #419AF9;
+.cancel {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  color: #FF5E00;
+  text-align: center;
+  border: 1px solid #949494;
+  background-color: white;
+  font-weight: bold;
+  margin: 20px auto 10px;
 }
 
-.primary-link {
-  color: #007BFF;
+.disable {
+  color: #E0E0E0;
+  background-color: white;
+  border: 1px solid #E0E0E0;
+}
+
+.normal:hover {
+  background-color: #419AF9;
+}
+.normal.disable:hover {
+  color: #E0E0E0;
+  background-color: white;
+  border: 1px solid #E0E0E0;
+}
+
+.option, .question {
+  color: #6C6C6C;
+}
+
+.cancel:hover {
+  background-color: #F4F4F4;
 }

@@ -1,1 +1,55 @@
 {{outlet}}
+<div class="container up">
+  <div class="admin">
+    <form>
+      <div>
+        <textarea class="question" type="text" name="question" placeholder="Type or paste question here ..."></textarea>
+      </div>
+      <div>
+        <input class="radio" name="correct" type="radio">
+        <textarea class="option" type="text" name="option" placeholder="Type or paste question here ..."></textarea>
+      </div>
+      <div>
+        <input class="radio" name="correct" type="radio">
+        <textarea class="option" type="text"  name="option" placeholder="Type or paste question here ..."></textarea>
+      </div>
+      <div>
+        <input class="radio" name="correct" type="radio">
+        <textarea class="option" type="text"  name="option" placeholder="Type or paste question here ..."></textarea>
+      </div>
+      <div>
+        <input class="radio" name="correct" type="radio">
+        <textarea class="option" type="text"  name="option" placeholder="Type or paste question here ..."></textarea>
+      </div>
+      <div class="selectors">
+        <div class="side-by-side">
+          <label>Level of Difficulty: </label>
+          <select class="half normal-mid" name="difficulty">
+            <option class="center">Select Level</option>
+            <option class="center" value="high">High</option>
+            <option class="center" value="meduim">Medium</option>
+            <option class="center" value="low">Low</option>
+          </select>
+        </div>
+        <div class="side-by-side">
+          <label>Type of Question: </label>
+          <select class="long normal-mid" name="type">
+            <option class="center">Select question type</option>
+            <option class="center" value="high">CSS</option>
+            <option class="center" value="meduim">HTML</option>
+            <option class="center" value="low">JavaScript</option>
+            <option class="center" value="low">Quality assurance</option>
+          </select>
+        </div>
+      </div>
+      <div class="selectors">
+        <div class="side-by-side">
+          <input class="normal disable" disabled type="submit" value="Add quiz">
+        </div>
+        <div class="side-by-side">
+          <input class="cancel" type="submit" value="Cancel">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
