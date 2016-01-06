@@ -1,11 +1,14 @@
 {{outlet}}
   <div class="container">
     <div class="page">
-      <form class="register">
-        <input class="normal-input" type="email" name="email" placeholder="email">
-        <input class="normal-input" type="password" name="password" placeholder="password">
-        <input class="normal-input" type="text" name="session" placeholder="session">
-        <input class="button normal" type="submit" value="Login">
+      <form class="register" {{action "authenticate" on="submit"}}>
+        {{input class="normal-input" type="email" value=identification placeholder="email"}}
+        {{input class="normal-input" type="password" value=password placeholder="password"}}
+        {{input class="normal-input" type="text" value=key placeholder="session"}}
+        <button class="button normal" type="submit"> Login </button>
+        {{#if errorMessage}}
+          <p>{{errorMessage}}</p>
+        {{/if}}
       </form>
     </div>
 </div>

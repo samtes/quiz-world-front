@@ -6,6 +6,9 @@
         {{#each sub in subTitles}}
           <li>{{#link-to sub.page class=sub.class}} {{sub.title}} {{/link-to}}</li>
         {{/each}}
+        {{#if session.isAuthenticated}}
+          <li><a class="active" {{action 'invalidateSession'}}>LOGOUT</a></li>
+        {{/if}}
       </ul>
     </div>
   </div>

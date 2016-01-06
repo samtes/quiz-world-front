@@ -58,6 +58,7 @@ a {
 
 .active {
   color: white;
+  cursor: pointer;
 }
 
 .inactive {
@@ -320,4 +321,13 @@ input[type="file"] {
   color: #949494;
   cursor: pointer;
   font-size: 15px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading img {
+  padding-top: 100px;
+  width: 50px;
 }

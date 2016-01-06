@@ -1,36 +1,31 @@
 {{outlet}}
   <div class="container">
     <div class="text-page">
-      <form>
+      <form {{action "generateUrl" on="submit"}}>
         <h3 class="center">Level of Difficulty</h3>
-        <select class="normal-mid half block" name="difficulty">
-          <option class="center">Select Level</option>
-          <option class="center" value="high">High</option>
-          <option class="center" value="meduim">Medium</option>
-          <option class="center" value="low">Low</option>
-        </select>
+        {{view "select" content=difficulities value=difficulty class="normal-mid half block"}}
         <h3 class="center">Type of Test</h3>
         <div class="center-div">
           <div>
-            <input class="" name="type" value="css" type="checkbox">
+            {{input name="type.css" checked=css type="checkbox"}}
             <label>CSS</label>
           </div>
           <div>
-            <input class="" name="type" value="html" type="checkbox">
+            {{input name="type.html" checked=html type="checkbox"}}
             <label>HTML</label>
           </div>
           <div>
-            <input class="" name="type" value="js" type="checkbox">
+            {{input name="type.js" checked=js type="checkbox"}}
             <label>JavaScript</label>
           </div>
           <div>
-            <input class="" name="type" value="qa" type="checkbox">
+            {{input name="type.qa" checked=qa type="checkbox"}}
             <label>Quality Assurance</label>
           </div>
         </div>
         <h3 class="center">Number of Questions</h3>
-        <input class="normal-mid block" type="number" min=4 max=40 value=20 name="quantity" required>
-        <input class="button normal" type="submit" value="GENERATE URL">
+        {{input class="normal-mid block" type="number" min=4 max=40 title="Choose mimimum 4 and maximum 40" value=quantity}}
+        <button class="button normal" type="submit"> GENERATE URL </button>
       </form>
     </div>
     <div class="generated-url">
