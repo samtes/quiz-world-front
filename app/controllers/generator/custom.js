@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  quantity: 20,
   difficulty: 'Low',
   difficulities: ["High", "Medium", "Low"],
 
   actions: {
-    generateUrl: function () {
+    generateUrl () {
       var types = this.getProperties("html", "css", "js", "qa");
       var newtype = [];
 
@@ -14,15 +15,17 @@ export default Ember.Controller.extend({
           newtype.push(key);
         }
       }
-
+      var difficultyMapping = { Low: 1, Medium: 2, High: 3 };
       var credentials = this.getProperties("difficulty", "quantity");
-      credentials.type = newtype;
-      console.log(credentials);
 
-      this.store.createRecord("session", credentials).save().then(function (record) {
-        console.log("success", record);
-      }, function (reason) {
-        console.log("error", reason);
+      credentials.difficulty = difficultyMapping[credentials.difficulty];
+      credentials.type = newtype;
+
+      this.store.createRecord("key", credentials).save().then(record =>{
+        console.log("success", record.get("content"));
+        Ember.$(".generated-url").text("Generated session => ".concat(record.get("content"))).show();
+      }).catch(reason => {
+        console.log("error", reason.error || reason.detail);
       });
     }
   }

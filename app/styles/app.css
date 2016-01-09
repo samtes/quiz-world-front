@@ -92,6 +92,7 @@ a {
 }
 
 .generated-url {
+  display: none;
   border: 1px solid #949494;
   color: #949494;
   border-radius: 9px;
@@ -99,7 +100,7 @@ a {
   font-style: oblique;
   padding: 5px 10px;
   height: 20px;
-  width: 650px;
+  width: 450px;
   text-align: center;
   margin: 20px auto;
 }
@@ -164,11 +165,11 @@ a {
 .selectors {
   justify-content: center;
   display: flex;
-  margin: 30px;
+  margin: 30px 5%;
 }
 
 .side-by-side {
-  margin: 0 40px;
+  margin: 0 10px;
 }
 
 .center {

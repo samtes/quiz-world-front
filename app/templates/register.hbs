@@ -7,6 +7,9 @@
       {{input class="normal-input" value=confirmPassword type="password" placeholder="confirm password"}}
       {{input class="normal-input" value=key type="text" placeholder="session"}}
       <button class="button normal" type="submit">Register</button>
+      {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+      {{/if}}
     </form>
   </div>
 </div>

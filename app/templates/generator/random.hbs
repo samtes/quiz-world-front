@@ -1,13 +1,12 @@
 {{outlet}}
   <div class="container">
     <div class="text-page">
-      <form>
+      <form {{action "generateRandomUrl" on="submit"}}>
         <h3 class="center">Number of Questions</h3>
-        <input class="normal-mid block" type="number" min=4 max=40 value=20 name="quantity" required>
-        <input class="button normal" type="submit" value="GENERATE URL">
+        {{input class="normal-mid block" type="number" min=4 max=40 title="Choose mimimum 4 and maximum 40" value=quantity}}
+        <button class="button normal">GENERATE URL</button>
       </form>
     </div>
     <div class="generated-url">
-      https://www.quiz-world.com/register?session-id=123A4abBCDcd123A4abBCDcd
     </div>
   </div>

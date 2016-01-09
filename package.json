@@ -37,5 +37,8 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-simple-auth": "1.0.1"
+  },
+  "dependencies": {
+    "ember-radio-buttons": "^4.0.1"
   }
 }
