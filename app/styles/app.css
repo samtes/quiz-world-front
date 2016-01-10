@@ -91,6 +91,33 @@ a {
   margin: 80px auto 0;
 }
 
+.table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table tbody tr:hover {
+  background-color: #EEF8F1;
+}
+
+table {
+  text-align: left;
+  margin-top: 20px;
+}
+th, td {
+  border-bottom: 1px solid #d6d6d6;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+table thead tr:nth-child(1), table thead tr:nth-child(1):hover {
+  background-color: rgb(237, 237, 237);
+}
+
+table tbody {
+  font-size: 15px;
+}
+
 .generated-url {
   display: none;
   border: 1px solid #949494;

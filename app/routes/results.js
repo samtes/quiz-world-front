@@ -12,7 +12,6 @@ export default Ember.Route.extend({
         { title:"ADMIN", class: "inactive", page: "admin" }
       ]
     });
-
-    this.set("results", models)
+    controller.set("results", models)
   }
 });

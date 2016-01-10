@@ -1,1 +1,28 @@
 {{outlet}}
+<div class="container">
+  <div class="success"></div>
+  <div class="text-page">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Session</th>
+          <th>User Email</th>
+          <th>Result</th>
+          <th>Time used</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each result in results}}
+          <tr>
+            <td>{{result.id}}</td>
+            <td>test@test.com</td>
+            <td>34 from {{result.questions.length}}</td>
+            <td>35 min out of 60 min</td>
+            <td>Completed</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
