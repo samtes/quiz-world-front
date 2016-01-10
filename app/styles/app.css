@@ -284,6 +284,14 @@ textarea {
   margin: 20px auto 10px;
 }
 
+.success {
+  display: none;
+  text-align: center;
+  color: #089E08;
+  font-size: 15px;
+  padding-bottom: 14px;
+}
+
 .disable {
   color: #E0E0E0;
   background-color: white;

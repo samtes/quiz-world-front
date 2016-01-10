@@ -6,12 +6,52 @@ export default Ember.Controller.extend({
   type: "CSS",
   types: ["CSS", "HTML", "JavaScript", "Quality Assurance"],
 
+  _populateArray (options, correct) {
+    let array = [];
+
+    for (let prop in options) {
+      let obj = { option: options[prop] };
+
+      if (prop === correct) {
+        obj.correct = true;
+      }
+
+      array.push(obj);
+    }
+
+    return array;
+  },
+
   actions: {
     addQuestion () {
-      var options = this.getProperties("opt_one", "opt_two", "opt_three", "opt_four");
-      var params = this.getProperties("question", "correct", "type", "difficulty");
-      console.log("Adds question action .....", options, params);
+      let options = this.getProperties("one", "two", "three", "four");
+      let difficultyMapping = { Low: 1, Medium: 2, High: 3 };
+      let typeMapping = { CSS: "css", HTML: "html", "JavaScript": "js", "Quality Assurance": "qa" };
+      let correct = this.get("correct");
+      let array = this._populateArray(options, correct);
+
+      let params = this.getProperties("question", "type", "difficulty");
+      params.difficulty = difficultyMapping[params.difficulty];
+      params.type = typeMapping[params.type];
+      params.options = array;
+
+      this.store.createRecord("question", params).save().then(() => {
+        Ember.$(".success").text("Question successfully added.").show().fadeOut(4000);
+        this.setProperties({
+          "question": "",
+          "type": "",
+          "difficulty": "",
+          "one": "",
+          "two": "",
+          "three": "",
+          "four": "",
+          "checked": ""
+        });
+      }).catch(reason => {
+        console.log("error ==> ", reason);
+      });
     },
+
     cancelQuestion () {
       console.log("Cancels question action .....");
     }

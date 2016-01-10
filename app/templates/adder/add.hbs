@@ -1,25 +1,26 @@
 {{outlet}}
 <div class="container up">
   <div class="admin">
+    <div class="success"></div>
     <form {{action "addQuestion" on="submit"}}>
       <div>
         {{textarea class="question" type="text" value=question placeholder="Type or paste question here ..."}}
       </div>
       <div>
         {{radio-button class="radio" value="one" checked=correct}}
-        {{textarea class="option" type="text" value=opt_one placeholder="Type or paste question here ..."}}
+        {{textarea class="option" type="text" value=one placeholder="Type or paste option here ..."}}
       </div>
       <div>
         {{radio-button class="radio" value="two" checked=correct}}
-        {{textarea class="option" type="text" value=opt_two placeholder="Type or paste question here ..."}}
+        {{textarea class="option" type="text" value=two placeholder="Type or paste option here ..."}}
       </div>
       <div>
         {{radio-button class="radio" value="three" checked=correct}}
-        {{textarea class="option" type="text" value=opt_three placeholder="Type or paste question here ..."}}
+        {{textarea class="option" type="text" value=three placeholder="Type or paste option here ..."}}
       </div>
       <div>
         {{radio-button class="radio" value="four" checked=correct}}
-        {{textarea class="option" type="text" value=opt_four placeholder="Type or paste question here ..."}}
+        {{textarea class="option" type="text" value=four placeholder="Type or paste option here ..."}}
       </div>
       <div class="selectors">
         <div class="side-by-side">
@@ -33,7 +34,7 @@
       </div>
       <div class="selectors">
         <div class="side-by-side">
-          {{input class="normal" type="submit" value="Add quiz"}}
+          <button class="normal">Add quiz</button>
         </div>
         <div class="side-by-side">
           {{input class="cancel" type="submit" value="Cancel"}}
