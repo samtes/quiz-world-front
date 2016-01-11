@@ -48,7 +48,6 @@ module.exports = function(environment) {
   }
 
   ENV['ember-simple-auth'] = {
-    routeAfterAuthentication: "instruction",
     authorizer: "authorizer:custom",
     store: "simple-auth-session-store:session"
   };

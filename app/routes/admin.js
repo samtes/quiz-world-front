@@ -10,6 +10,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       ]
     });
 
+    controller.set("user", this.get("currentUser"));
     controller.set("buttons", [
       { button: "ADD OR UPDATE QUESTIONS", page: "adder" },
       { button: "VIEW RESULTS", page: "results" },
