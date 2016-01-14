@@ -2,6 +2,7 @@
 <div class="container">
   <div class="success"></div>
   <div class="text-page">
+    <h1>{{email}}</h1>
     <table class="table">
       <thead>
         <tr>
@@ -14,12 +15,12 @@
       </thead>
       <tbody>
         {{#each result in results}}
-          <tr>
+          <tr {{bind-attr class="result.class"}}>
             <td>{{result.id}}</td>
-            <td>test@test.com</td>
-            <td>34 from {{result.questions.length}}</td>
+            <td>{{result.user}}</td>
+            <td>{{result.correct.length}}/{{result.questions.length}}</td>
             <td>35 min out of 60 min</td>
-            <td>Completed</td>
+            <td>{{result.status}}</td>
           </tr>
         {{/each}}
       </tbody>

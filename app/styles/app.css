@@ -103,6 +103,7 @@ a {
 table {
   text-align: left;
   margin-top: 20px;
+  color: #322F2F;
 }
 th, td {
   border-bottom: 1px solid #d6d6d6;
@@ -110,8 +111,17 @@ th, td {
   padding-left: 10px;
 }
 
+.pending {
+  background-color: #DFDFDF;
+}
+
+.progress {
+  background-color: #BDFFBF;
+}
+
 table thead tr:nth-child(1), table thead tr:nth-child(1):hover {
-  background-color: rgb(237, 237, 237);
+  background-color: #007BFF;
+  color: white;
 }
 
 table tbody {
