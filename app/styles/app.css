@@ -119,6 +119,10 @@ th, td {
   background-color: #BDFFBF;
 }
 
+.registered {
+  background-color: #BCE0FF;
+}
+
 table thead tr:nth-child(1), table thead tr:nth-child(1):hover {
   background-color: #007BFF;
   color: white;

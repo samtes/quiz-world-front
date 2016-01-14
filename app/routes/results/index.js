@@ -23,16 +23,6 @@ export default Ember.Route.extend({
     let users = models.users;
 
     results.forEach(item => {
-      if (item.get("questions").length === item.get("correct").length + item.get("wrong").length) {
-        item.status = "Completed";
-        item.class = "completed";
-      } else if (item.get("correct").length + item.get("wrong").length > 0) {
-        item.status = "In progress";
-        item.class = "progress";  
-      } else {
-        item.status = "Pending";
-        item.class = "pending";
-      }
 
       item.user = "None";
       if (item.get("userId")) {
@@ -42,7 +32,18 @@ export default Ember.Route.extend({
           }
         });
       }
+      if (item.get("questions").length === item.get("correct").length + item.get("wrong").length) {
+        item.status = "Completed";
+        item.class = "completed";
+      } else if (item.get("correct").length + item.get("wrong").length > 0) {
+        item.status = "In progress";
+        item.class = "progress";
+      } else {
+        let data = item.user !== "None" ? "Registered" : "Pending";
+        [ item.status, item.class ] = [data, data.toLowerCase()];
+      }
     });
+
 
     return results;
   }
