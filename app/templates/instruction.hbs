@@ -29,8 +29,8 @@
     </ul>
     <ul>
       <li class="checkbox">
-        <form>
-          <input type="checkbox" name="accept">
+        <form {{action "startQuiz" on="submit"}}>
+          <input type="checkbox" name="accept" required>
           <label>Etiam mattis tempus risus, vitae tempus sem facilisis at. Etiam mattis
             rhoncus urna, eget consequat ante iaculis at.</label>
           <input class="button normal center" type="submit" value="Start Quiz">

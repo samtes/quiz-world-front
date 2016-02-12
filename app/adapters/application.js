@@ -12,6 +12,6 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
   },
 
   shouldBackgroundReloadRecord () {
-    return false;
+    return true;
   }
 });

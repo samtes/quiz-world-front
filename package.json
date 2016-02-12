@@ -16,7 +16,7 @@
   "engines": {
     "node": "^3.3.12"
   },
-  "author": "",
+  "author": "Samuel Weldemariam",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",

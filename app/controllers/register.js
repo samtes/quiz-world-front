@@ -8,12 +8,12 @@ export default Ember.Controller.extend({
       var user = this.getProperties("email", "password", "confirmPassword", "key");
 
       this.store.createRecord("user", user).save().then(record => {
-        console.log(record);
+
         this.get('session').authenticate('authenticator:custom', user.email, user.password, user.key).catch((reason) => {
           this.set('errorMessage', reason.error || reason);
         });
-      }).catch(reason => {
-        console.log(reason);
+      }, reason => {
+          this.set('errorMessage', reason.error || reason);
       });
     }
   }

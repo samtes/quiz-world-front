@@ -22,6 +22,10 @@ Router.map(function() {
   this.route('results', function() {
     this.route('result');
   });
+  this.route('questions');
+  this.route('question', { path: "/questions/:question_id" });
+  this.route('completed', { path: "/questions/completed" });
+  this.route('refresher');
 });
 
 export default Router;

@@ -8,5 +8,7 @@ export default DS.Model.extend({
   correct: DS.attr("array"),
   wrong: DS.attr("array"),
   questions: DS.attr("array"),
-  userId: DS.attr("string")
+  userId: DS.attr("string"),
+  questionId: DS.attr("string"),
+  answer: DS.attr("string")
 });

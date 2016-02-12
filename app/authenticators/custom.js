@@ -29,7 +29,8 @@ export default Base.extend({
         Ember.run(() => {
           resolve({
             token: response.token,
-            userID: response.userID
+            userID: response.userID,
+            key: response.key
           });
         });
       }, function (xhr, status, error) {

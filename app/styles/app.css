@@ -7,6 +7,40 @@ html, body {
   transition: opacity 0.2s ease, padding 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+.question_container {
+  width: 50%;
+  margin: auto;
+}
+
+.question_item {
+  padding: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.option_item {
+  padding: 5px 5px 5px 15px;
+  text-align: left;
+  border: 1px solid #727272;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.option_item:hover {
+  border: 1px solid #007BFF;
+}
+
+.completed_page {
+  text-align: center;
+  padding: 160px 0;
+  color: #727272;
+}
+
+.selected {
+  background-color: #007BFF;
+  color: white;
+}
+
 a {
   text-decoration: none;
   color: #007BFF;

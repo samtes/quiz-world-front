@@ -1,0 +1,25 @@
+{{outlet}}
+<div class="container up">
+  <div class="admin">
+    <div class="success"></div>
+    <div class="question_container">
+      <form {{action "submitQuiz" on="submit"}}>
+        <div class="question_item">
+          {{model.key}}
+          <p>1. {{model.question}} </p>
+        </div>
+        {{#each model.options as |option index|}}
+          <div id={{index}} {{action "selected" option.option index}} class="option_item">
+            <p> {{option.option}}</p>
+            <input hidden class="{{index}}" type="text">
+          </div>
+        {{/each}}
+        <div class="selectors">
+          <div class="side-by-side">
+            <button class="normal">Submit quiz</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

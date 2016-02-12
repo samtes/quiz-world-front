@@ -6,8 +6,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     this.controllerFor("application").setProperties({
       title: "Instruction Page",
       subTitles: [
-        { title:"ADMIN", class: "inactive", page: "admin" } 
+        { title:"ADMIN", class: "inactive", page: "admin" }
       ]
     });
+  },
+  actions: {
+    startQuiz () {
+      this.transitionTo("questions");
+    }
   }
 });

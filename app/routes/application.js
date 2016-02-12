@@ -11,6 +11,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
   _populateCurrentUser() {
     let userId = this.get("session.data.authenticated.userID");
+    this.controllerFor("question").set("key", this.get("session.data.authenticated.key"));
 
     this.store.find("user", userId).then(user => {
       this.get("currentUser").set("content", user);
